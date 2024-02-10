@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    background-color: #ECF0F3;
+    font-family: "Poppins", sans-serif;
+}
+
+form {
+    margin: 100px auto;
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    width: 100%;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    box-shadow: inset 0px 1px 0px 0px #fff6af;
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+/* .disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+} */

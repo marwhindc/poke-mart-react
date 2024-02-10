@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ECF0F3;
+}
+
+#root {
+    width: 65%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #2E3A98;
+    font-weight: bold;
+}
+
+.loggedin-user {
+    font-weight: bold;
+}
+
+span {
+    color: #2E3A98;
+}
+
+header {
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    font-size: 18px;
+}
+
+/* .container {
+    margin-top: 10px;
+} */
+
+main {
+    flex: 1;
+}
+
+.container-title {
+    text-align: center;
+    color: #2E3A98;
+}
+
+.shopping-cart-icon-container {
+    display: flex;
+}
+
+.shopping-cart-badge {
+    font-size: 16px;
+    position: relative;
+    border-radius: 2.75rem;
+    min-width: 0.6875rem;
+    line-height: 16px;
+    padding: 0 0.3125rem;
+    text-align: center;
+    height: 18px;
+    border: 0.125rem solid #2E3A98;
+    color: #2E3A98;
+    background-color: #ECF0F3;
+    left: -1.125rem;
+    top: -0.5rem;
+    margin-right: -0.875rem;
+}
+
+/* product-page css */
+
+.product-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* padding: 15px; */
+    padding: 40px calc((100% - (255px * 3)) / 2);
+}
+
+.product-item-card {
+    /* outline: 1px solid black; */
+    color: white;
+    -webkit-text-stroke: .5px black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    /* width: 150px; */
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 150px;
+    margin: 1em 20px;
+    background: linear-gradient(180deg, rgba(252, 49, 46, 1) 25%, rgba(242, 87, 71, 1) 75%);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.product-name,
+.product-price {
+    font-weight: bold;
+}
+
+.product-name {
+    font-size: 18px;
+}
+
+.product-price {
+    font-size: 24px;
+}
+
+.submit-btn {
+    box-shadow: inset 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+.submit-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+footer {
+    text-align: center;
+    height: 50px;
+}
+
+/*cart-page css*/
+.shopping-cart-header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.shopping-cart-header>* {
+    width: 15%;
+    text-align: center;
+}
+
+.product-heading {
+    flex-grow: 2;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.cart-item-card {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+
+    color: white;
+    -webkit-text-stroke: .5px black;
+    font-weight: bold;
+    font-size: 18px;
+
+    background: linear-gradient(270deg, rgba(252, 49, 46, 1) 25%, rgba(242, 87, 71, 1) 75%);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cart-item-card>* {
+    width: 15%;
+    text-align: center;
+}
+
+.cart-item-product {
+    flex-grow: 2;
+    display: flex;
+    column-gap: 25px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.cart-item-quantity input:active {
+    position: relative;
+    top: 1px;
+}
+
+.shopping-cart-checkout {
+    margin: 30px 20px 50px 20px;
+}
+
+.subtotal-price-container {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.checkout-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkout-btn {
+    font-size: 18px;
+}
+
+/* purchases-page css */
+
+.co-cart-list {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.co-cart-container {
+
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 50px;
+
+    font-size: 18px;
+    -webkit-text-stroke: .5px black;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(270deg, rgba(252, 49, 46, 1) 25%, rgba(242, 87, 71, 1) 75%);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.co-cart-total {
+    align-self: flex-end;
+
+}
+
+.co-cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.co-cart-item>* {
+    width: 25%;
+    text-align: right;
+}
+
+.co-cart-item-product {
+    flex-grow: 2;
+    display: flex;
+    column-gap: 25px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 1080px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-right {
+        gap: 18px;
+    }
+
+    #root {
+        width: 80%;
+    }
+
+    .co-cart-container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #root {
+        width: 90%;
+    }
+
+    .co-cart-container {
+        padding: 20px;
+    }
+
+    .co-cart-item-product {
+        margin-left: 0;
+    }
+}

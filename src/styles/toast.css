@@ -1,0 +1,42 @@
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.2s ease-in;
+    z-index: 1000;
+    /* this is to make sure it's on top of other elements */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%) translateY(50px);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.toast-container.fade-out {
+    animation: fadeOut 3s ease-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
