@@ -246,6 +246,10 @@ footer {
     font-size: 18px;
 }
 
+.quantity-button[disabled] {
+    pointer-events: none;
+}
+
 /* purchases-page css */
 
 .co-cart-list {
